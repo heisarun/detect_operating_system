@@ -71,13 +71,22 @@ end
 #----------------------------------
 # Operating-System Detection
 
-if  windows || hybrid  || custom && linux
+# Full Windows
+if  windows && hybrid && custom && linux
 	#puts " Windows Machine ! with multiple Systems "
-	operating_system = "windows"
+	@operating_system = "windows-hybrid"
+
 else
-	#puts " Linux system with Bash"
-	operating_system = "linux"
+# Windows Only
+	if windows || hybrid || custom 
+		#puts " Linux system with Bash"
+		@operating_system = "windows-only"
+	else
+# Linux Only
+		@operating_system = "linux-only"
+	end
 end
+
 
 #puts operating_system
 #----------------------------------
@@ -97,7 +106,7 @@ isThereWindowsTerminal	= nil
 
 #----------------------------------
 # Only Allowing variable to be extended
-puts operating_system
+#puts @operating_system
 #----------------------------------
 
 #puts "reaching the expected requirement"
