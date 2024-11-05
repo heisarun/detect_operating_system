@@ -1,2 +1,3 @@
-# detect_operating_system
-ruby detectiong of operating system
+# detect_operating_system Shells
+
+Detect shells of windows operating system.
