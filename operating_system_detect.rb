@@ -78,7 +78,7 @@ if  windows && hybrid && custom && linux
 
 else
 # Windows Only
-	if windows || hybrid || custom 
+	if windows || hybrid || custom
 		#puts " Linux system with Bash"
 		@operating_system = "windows-only"
 	else
