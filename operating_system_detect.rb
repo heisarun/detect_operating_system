@@ -87,6 +87,10 @@ else
 	end
 end
 
+#----------------------------------
+# Ruby Platform Dump
+# print RUBY_PLATFORM
+#----------------------------------
 
 #puts operating_system
 #----------------------------------
